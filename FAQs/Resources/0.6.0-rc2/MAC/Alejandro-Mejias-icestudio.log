@@ -1,0 +1,567 @@
+
+
+
+
+=======================================================================================
+ Icestudio session Tue Jul 06 2021 14:58:07 GMT-0500 (Colombia Standard Time)
+ Version: 0.6.0-rc2
+=======================================================================================
+Architecture: x64
+Platform: darwin
+Profile file: /Users/amejia/.icestudio/profile.json
+
+- PROFILE:
+
+{
+  "data": {
+    "board": "blackice-mx",
+    "boardRules": true,
+    "collection": "/Users/amejia/.icestudio/collections/Collection-Jedi-master",
+    "language": "en",
+    "uiTheme": "dark",
+    "externalCollections": "",
+    "externalPlugins": "",
+    "remoteHostname": "",
+    "showFPGAResources": false,
+    "displayVersionInfoWindow": "yes",
+    "lastVersionReview": "0.6.0-rc2",
+    "loggingEnabled": false,
+    "loggingFile": "",
+    "pythonEnv": {
+      "python": "",
+      "pip": ""
+    },
+    "macosFTDIDrivers": true
+  }
+}
+
+- PATHs
+
+common.BASE_DIR: Icestudio base dir: /Users/amejia
+common.ICESTUDIO_DIR: Icestudio folder: /Users/amejia/.icestudio
+common.PROFILE_PATH: Profile path: /Users/amejia/.icestudio/profile.json
+common.INTERNAL_COLLECTIONS_DIR: Internal collections: /Users/amejia/.icestudio/collections
+common.APIO_HOME_DIR: APIO folder: /Users/amejia/.icestudio/apio
+common.ENV_DIR: PYthon virtual environment: /Users/amejia/.icestudio/venv
+common.ENV_BIN_DIR: Executable files: /Users/amejia/.icestudio/venv/bin
+common.ENV_PIP: PIP executable:  /Users/amejia/.icestudio/venv/bin/pip3
+common.APIO_CMD: Apio command: export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio"
+Common.APP: Icestudio APP folder: /private/var/folders/0y/l4l5ywyn2ybcbq1ysqx1vx6w0000gn/T/AppTranslocation/9EAA292B-BDBC-4DC2-9C07-53994ED6745F/d/icestudio.app/Contents/Resources/app.nw
+common.APP_DIR: Icestudio execution folder: /private/var/folders/0y/l4l5ywyn2ybcbq1ysqx1vx6w0000gn/T/AppTranslocation/9EAA292B-BDBC-4DC2-9C07-53994ED6745F/d/icestudio.app/Contents/Versions/71.0.3578.98/nwjs Helper.app/Contents/MacOS
+
+
+
+------> MENU ENTRY POINT: Install Toolchain
+**** STEP: Check internet connection
+**** STEP: Check Python
+**** STEP: Create virtualenv
+>>>> utils.executeCommand => /usr/bin/python3 -m venv "/Users/amejia/.icestudio/venv"
+
+**** STEP: Install APIO
+>>>> utils.executeCommand => "/Users/amejia/.icestudio/venv/bin/pip3" install -U apio[blackiceprog,tinyfpgab,tinyprog,icefunprog]==0.6.7
+
+>>(OUTPUT): Collecting apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7
+
+
+>>(OUTPUT):   Downloading https://files.pythonhosted.org/packages/77/43/79882f5d9f19b44e20e9bc2be4806b2980b3368636ccef37aae2fd7a564d/apio-0.6.7-py3-none-any.whl (64kB)
+
+
+>>(OUTPUT): Collecting pyjwt<2,>=1.5.3 (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/87/8b/6a9f14b5f781697e51259d81657e6048fd31a113229cf346880bb7545565/PyJWT-1.7.1-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting click (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/76/0a/b6c5f311e32aeb3b406e03c079ade51e905ea630fc19d1262a46249c1c86/click-8.0.1-py3-none-any.whl
+
+
+>>(OUTPUT): Collecting colorama (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting wheel<1,>=0.35.0 (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/65/63/39d04c74222770ed1589c0eaba06c05891801219272420b40311cd60c880/wheel-0.36.2-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting semantic_version<3,>=2.5.0 (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/a5/15/00ef3b7888a10363b7c402350eda3acf395ff05bebae312d1296e528516a/semantic_version-2.8.5-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting requests<3,>=2.4.0 (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/29/c1/24814557f1d22c56d50280771a17307e6bf87b70727d975fd6b2ce6b014a/requests-2.25.1-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting pyserial<4,>=3 (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/07/bc/587a445451b253b285629263eb51c2d8e9bcea4fc97826266d186f96f558/pyserial-3.5-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting blackiceprog<3.0.0,>=2.0.0; extra == "blackiceprog" (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/ba/ff/73f7b56b88ac7f6ac16f79ff80400e3e9cb50bfe8dfd0dd57681cf26567b/blackiceprog-2.0.0.tar.gz
+
+
+>>(OUTPUT): Collecting icefunprog<3.0.0,>=2.0.3; extra == "icefunprog" (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/65/f2/6bb9d81eba6ddbdaa2a30056f781b97b07558ac9f605005049991d228161/icefunprog-2.0.3.tar.gz
+
+
+>>(OUTPUT): Collecting tinyfpgab<1.2.0,>=1.1.0; extra == "tinyfpgab" (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/35/52/d79afa3f1e0264e14c7f46a0f338c8c7d551546546be8a6241fd4c7326d5/tinyfpgab-1.1.0.tar.gz
+
+
+>>(OUTPUT): Collecting tinyprog<1.1.0,>=1.0.21; extra == "tinyprog" (from apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/2e/10/cfcd7e90514657d2419c842c2aaaa3a96d3d3e90d2e25a6c6ea273a21c87/tinyprog-1.0.21-py3-none-any.whl
+
+
+>>(OUTPUT): Collecting urllib3<1.27,>=1.21.1 (from requests<3,>=2.4.0->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Downloading https://files.pythonhosted.org/packages/5f/64/43575537846896abac0b15c3e5ac678d787a4021e906703f1766bfb8ea11/urllib3-1.26.6-py2.py3-none-any.whl (138kB)
+
+
+>>(OUTPUT): Collecting chardet<5,>=3.0.2 (from requests<3,>=2.4.0->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/19/c7/fa589626997dd07bd87d9269342ccb74b1720384a4d739a1872bd84fbe68/chardet-4.0.0-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting idna<3,>=2.5 (from requests<3,>=2.4.0->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting certifi>=2017.4.17 (from requests<3,>=2.4.0->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/05/1b/0a0dece0e8aa492a6ec9e4ad2fe366b511558cdc73fd3abc82ba7348e875/certifi-2021.5.30-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting jsonmerge<2,>=1.4.0 (from tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/37/1b/05dd6fd53a76a73e898f3d2b60d02ee90af9e11de2f8e3802a6262fa1ca9/jsonmerge-1.8.0.tar.gz
+
+
+>>(OUTPUT): Collecting six (from tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting tqdm<5,>=4.19.5 (from tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Downloading https://files.pythonhosted.org/packages/7a/ec/f8ff3ccfc4e59ce619a66a0bf29dc3b49c2e8c07de29d572e191c006eaa2/tqdm-4.61.2-py2.py3-none-any.whl (76kB)
+
+
+>>(OUTPUT): Collecting packaging (from tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Downloading https://files.pythonhosted.org/packages/3c/77/e2362b676dc5008d81be423070dd9577fa03be5da2ba1105811900fda546/packaging-21.0-py3-none-any.whl (40kB)
+
+
+>>(OUTPUT): Collecting intelhex<3,>=2.2.1 (from tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/97/78/79461288da2b13ed0a13deb65c4ad1428acb674b95278fa9abf1cefe62a2/intelhex-2.3.0-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting pyusb (from tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Downloading https://files.pythonhosted.org/packages/29/59/6f722ebd8126987349bef6f141749d79db31a505f724bd658412a91a965b/pyusb-1.2.0-py3-none-any.whl (58kB)
+
+
+>>(OUTPUT): Collecting jsonschema (from jsonmerge<2,>=1.4.0->tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/c5/8f/51e89ce52a085483359217bc72cdbf6e75ee595d5b1d4b5ade40c7e018b8/jsonschema-3.2.0-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting pyparsing>=2.0.2 (from packaging->tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Using cached https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl
+
+
+>>(OUTPUT): Collecting attrs>=17.4.0 (from jsonschema->jsonmerge<2,>=1.4.0->tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Downloading https://files.pythonhosted.org/packages/20/a9/ba6f1cd1a1517ff022b35acd6a7e4246371dfab08b8e42b829b6d07913cc/attrs-21.2.0-py2.py3-none-any.whl (53kB)
+
+
+>>(OUTPUT): Collecting pyrsistent>=0.14.0 (from jsonschema->jsonmerge<2,>=1.4.0->tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7)
+
+
+>>(OUTPUT):   Downloading https://files.pythonhosted.org/packages/f4/d7/0fa558c4fb00f15aabc6d42d365fcca7a15fcc1091cd0f5784a14f390b7f/pyrsistent-0.18.0.tar.gz (104kB)
+
+
+>>(OUTPUT):   Installing build dependencies: started
+
+
+>>(OUTPUT):   Installing build dependencies: finished with status 'done'
+
+
+>>(OUTPUT):   Getting requirements to build wheel: started
+
+
+>>(OUTPUT):   Getting requirements to build wheel: finished with status 'done'
+
+
+>>(OUTPUT):     Preparing wheel metadata: started
+
+
+>>(OUTPUT):     Preparing wheel metadata: finished with status 'done'
+
+
+>>(OUTPUT): Requirement already satisfied, skipping upgrade: setuptools in /Users/amejia/.icestudio/venv/lib/python3.8/site-packages (from jsonschema->jsonmerge<2,>=1.4.0->tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7) (41.2.0)
+
+
+>>(OUTPUT): Building wheels for collected packages: pyrsistent
+
+
+>>(OUTPUT):   Building wheel for pyrsistent (PEP 517): started
+
+
+>>(OUTPUT):   Building wheel for pyrsistent (PEP 517): finished with status 'done'
+
+
+>>(OUTPUT):   Created wheel for pyrsistent: filename=pyrsistent-0.18.0-cp38-cp38-macosx_10_14_x86_64.whl size=82055 sha256=6a0eaaf071df47d4fdeaf8f2bc1c45becac128e46599788071f9e70b283d7b19
+
+
+>>(OUTPUT):   Stored in directory: /Users/amejia/Library/Caches/pip/wheels/ac/d9/e0/191232e81cfed175486a03c7c7b0ec02e269b4b479b99d1106
+
+
+>>(OUTPUT): Successfully built pyrsistent
+
+
+>>(OUTPUT): Installing collected packages: pyjwt, click, colorama, wheel, semantic-version, urllib3, chardet, idna, certifi, requests, pyserial, blackiceprog, icefunprog, tinyfpgab, six, attrs, pyrsistent, jsonschema, jsonmerge, tqdm, pyparsing, packaging, intelhex, pyusb, tinyprog, apio
+
+
+>>(OUTPUT):   Running setup.py install for blackiceprog: started
+
+
+>>(OUTPUT):     Running setup.py install for blackiceprog: finished with status 'done'
+
+
+>>(OUTPUT):   Running setup.py install for icefunprog: started
+
+
+>>(OUTPUT):     Running setup.py install for icefunprog: finished with status 'done'
+
+
+>>(OUTPUT):   Running setup.py install for tinyfpgab: started
+
+
+>>(OUTPUT):     Running setup.py install for tinyfpgab: finished with status 'done'
+
+
+>>(OUTPUT):   Running setup.py install for jsonmerge: started
+
+
+>>(OUTPUT):     Running setup.py install for jsonmerge: finished with status 'done'
+
+
+>>(OUTPUT): Successfully installed apio-0.6.7 attrs-21.2.0 blackiceprog-2.0.0 certifi-2021.5.30 chardet-4.0.0 click-8.0.1 colorama-0.4.4 icefunprog-2.0.3 idna-2.10 intelhex-2.3.0 jsonmerge-1.8.0 jsonschema-3.2.0 packaging-21.0 pyjwt-1.7.1 pyparsing-2.4.7 pyrsistent-0.18.0 pyserial-3.5 pyusb-1.2.0 requests-2.25.1 semantic-version-2.8.5 six-1.16.0 tinyfpgab-1.1.0 tinyprog-1.0.21 tqdm-4.61.2 urllib3-1.26.6 wheel-0.36.2
+
+
+>>(ERROR): WARNING: You are using pip version 19.2.3, however version 21.1.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+
+**** STEP: APIO install system
+>>>> utils.executeCommand => export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio" install system
+
+>>(OUTPUT): APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+Installing system package:
+
+
+>>(OUTPUT): Warning: full platform does not match: darwin_x86_64                
+         Trying OS name: darwin                
+
+
+>>(OUTPUT): Download tools-system-darwin-1.1.2.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'system' has been successfully installed!
+
+
+**** STEP: APIO install yosys
+>>>> utils.executeCommand => export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio" install yosys
+
+>>(OUTPUT): APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+Installing yosys package:
+
+
+>>(OUTPUT): Warning: full platform does not match: darwin_x86_64                
+         Trying OS name: darwin                
+
+
+>>(OUTPUT): Download toolchain-yosys-darwin-2019.12.11.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'yosys' has been successfully installed!
+
+
+**** STEP: APIO install ice40
+>>>> utils.executeCommand => export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio" install ice40
+
+>>(OUTPUT): APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+Installing ice40 package:
+
+
+>>(OUTPUT): Warning: full platform does not match: darwin_x86_64                
+         Trying OS name: darwin                
+
+
+>>(OUTPUT): Download toolchain-ice40-darwin-2019.12.11.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'ice40' has been successfully installed!
+
+
+**** STEP: APIO install ecp5
+>>>> utils.executeCommand => export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio" install ecp5
+
+>>(OUTPUT): APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+Installing ecp5 package:
+
+
+>>(OUTPUT): Warning: full platform does not match: darwin_x86_64                
+         Trying OS name: darwin                
+
+
+>>(OUTPUT): Download toolchain-ecp5-darwin-2019.12.11.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'ecp5' has been successfully installed!
+
+
+**** STEP: APIO install fujprog
+>>>> utils.executeCommand => export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio" install fujprog
+
+>>(OUTPUT): APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+Installing fujprog package:
+
+
+>>(OUTPUT): Warning: full platform does not match: darwin_x86_64                
+         Trying OS name: darwin                
+
+
+>>(OUTPUT): Download toolchain-fujprog-darwin-2020.10.6.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'fujprog' has been successfully installed!
+
+
+**** STEP: APIO install icesprog
+>>>> utils.executeCommand => export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio" install icesprog
+
+>>(OUTPUT): APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+Installing icesprog package:
+
+
+>>(OUTPUT): Warning: full platform does not match: darwin_x86_64                
+         Trying OS name: darwin                
+
+
+>>(OUTPUT): Download toolchain-icesprog-darwin-1.0.0.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'icesprog' has been successfully installed!
+
+
+**** STEP: APIO install duf
+>>>> utils.executeCommand => export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio" install dfu
+
+>>(OUTPUT): APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+Installing dfu package:
+
+
+>>(OUTPUT): Warning: full platform does not match: darwin_x86_64                
+         Trying OS name: darwin                
+
+
+>>(OUTPUT): Download toolchain-dfu-darwin-2020.11.24.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'dfu' has been successfully installed!
+
+
+**** STEP: APIO install iverilog
+>>>> utils.executeCommand => export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio" install iverilog
+
+>>(OUTPUT): APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+Installing iverilog package:
+
+
+>>(OUTPUT): Warning: full platform does not match: darwin_x86_64                
+         Trying OS name: darwin                
+
+
+>>(OUTPUT): Download toolchain-iverilog-darwin-1.1.1.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'iverilog' has been successfully installed!
+
+
+**** STEP: APIO install scons
+>>>> utils.executeCommand => export APIO_HOME_DIR="/Users/amejia/.icestudio/apio"; "/Users/amejia/.icestudio/venv/bin/apio" install scons
+
+>>(OUTPUT): APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+APIO_HOME_DIR: /Users/amejia/.icestudio/apio
+/Users/amejia/.icestudio/apio
+Installing scons package:
+
+
+>>(OUTPUT): Download scons-3.0.1.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'scons' has been successfully installed!
+
+
+****************** INSTALLATION COMPLETED! **************
+
+
+
+drivers.enableDarwinDrivers
+/drivers.enableDarwinDrivers
+STDERR ==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+Updated 1 tap (homebrew/core).
+Warning: Refusing to link macOS provided/shadowed software: libffi
+For compilers to find libffi you may need to set:
+  export LDFLAGS="-L/usr/local/opt/libffi/lib"
+  export CPPFLAGS="-I/usr/local/opt/libffi/include"
+
+STDERR ==> Updated Formulae
+commitizen
+fish
+infracost
+pypy
+pypy3
+==> Downloading https://ghcr.io/v2/homebrew/core/libusb/manifests/1.0.24
+Already downloaded: /Users/amejia/Library/Caches/Homebrew/downloads/a742820e4e57061f1c9699d362d6562c0f686e4d1f4b7f61a544164364b2ec42--libusb-1.0.24.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/libusb/blobs/sha256:74e0067e968ddbea31e070885ae86bc1db5c66fd157588e84576e653e62894c8
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:74e0067e968ddbea31e070885ae86bc1db5c66fd157588e84576e653e62894c8?se=2021-07-06T20%3A10%3A00Z&sig=oqdDq3rYMm2MKh257BdZVIp%2BMqT0mTq1i40xmEpUk6A%3D&sp=r&spr=https&sr=b&sv=2019-12-12
+==> Pouring libusb--1.0.24.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/libusb/1.0.24: 22 files, 516.7KB
+Unlinking /usr/local/Cellar/libusb/1.0.24... 6 symlinks removed.
+Linking /usr/local/Cellar/libusb/1.0.24... 6 symlinks created.
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/manifests/3.3_3
+Already downloaded: /Users/amejia/Library/Caches/Homebrew/downloads/579ebe43f9cb570f21b0b4deb5906e9e833291b57639d94ff691b9377cbfdddd--libffi-3.3_3.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/blobs/sha256:8a7a02cffb368dfdeaeb1176a7a7bcc6402371aee0a30bb001aff3452a4202c6
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:8a7a02cffb368dfdeaeb1176a7a7bcc6402371aee0a30bb001aff3452a4202c6?se=2021-07-06T20%3A10%3A00Z&sig=WaeZ9xQsMedSpI0JFg5MWGR6zIM0phapaMspy0ACgQU%3D&sp=r&spr=https&sr=b&sv=2019-12-12
+==> Pouring libffi--3.3_3.big_sur.bottle.tar.gz
+==> Caveats
+libffi is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+For compilers to find libffi you may need to set:
+  export LDFLAGS="-L/usr/local/opt/libffi/lib"
+  export CPPFLAGS="-I/usr/local/opt/libffi/include"
+
+==> Summary
+🍺  /usr/local/Cellar/libffi/3.3_3: 17 files, 540.5KB
+Unlinking /usr/local/Cellar/libffi/3.3_3... 0 symlinks removed.
+
