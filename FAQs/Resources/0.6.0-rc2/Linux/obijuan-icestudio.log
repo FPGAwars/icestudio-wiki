@@ -1,0 +1,416 @@
+
+
+
+
+=======================================================================================
+ Icestudio session Thu Jul 08 2021 12:18:07 GMT+0200 (Central European Summer Time)
+ Version: 0.6.0-rc2
+=======================================================================================
+Architecture: x64
+Platform: linux
+Profile file: /home/obijuan/.icestudio/profile.json
+
+- PROFILE:
+
+{
+  "data": {
+    "board": "alhambra-ii",
+    "boardRules": true,
+    "collection": "/tmp/.mount_S0SvkU/usr/bin/resources/collection",
+    "language": "en",
+    "uiTheme": "dark",
+    "externalCollections": "",
+    "externalPlugins": "",
+    "remoteHostname": "",
+    "showFPGAResources": false,
+    "displayVersionInfoWindow": "no",
+    "lastVersionReview": "0.6.0-rc2",
+    "loggingEnabled": false,
+    "loggingFile": "",
+    "pythonEnv": {
+      "python": "",
+      "pip": ""
+    }
+  }
+}
+
+- PATHs
+
+common.BASE_DIR: Icestudio base dir: /home/obijuan
+common.ICESTUDIO_DIR: Icestudio folder: /home/obijuan/.icestudio
+common.PROFILE_PATH: Profile path: /home/obijuan/.icestudio/profile.json
+common.INTERNAL_COLLECTIONS_DIR: Internal collections: /home/obijuan/.icestudio/collections
+common.APIO_HOME_DIR: APIO folder: /home/obijuan/.icestudio/apio
+common.ENV_DIR: PYthon virtual environment: /home/obijuan/.icestudio/venv
+common.ENV_BIN_DIR: Executable files: /home/obijuan/.icestudio/venv/bin
+common.ENV_PIP: PIP executable:  /home/obijuan/.icestudio/venv/bin/pip3
+common.APIO_CMD: Apio command: export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio"
+Common.APP: Icestudio APP folder: /tmp/.mount_mz8x3F/usr/bin
+common.APP_DIR: Icestudio execution folder: /tmp/.mount_mz8x3F/usr/bin
+
+
+
+------> MENU ENTRY POINT: Install Toolchain
+**** STEP: Check internet connection
+**** STEP: Check Python
+**** STEP: Create virtualenv
+>>>> utils.executeCommand => /usr/bin/python3.8 -m venv "/home/obijuan/.icestudio/venv"
+
+**** STEP: Install APIO
+>>>> utils.executeCommand => "/home/obijuan/.icestudio/venv/bin/pip3" install -U apio[blackiceprog,tinyfpgab,tinyprog,icefunprog]==0.6.7
+
+>>(OUTPUT): Collecting apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7
+
+
+>>(OUTPUT):   Using cached apio-0.6.7-py3-none-any.whl (64 kB)
+
+
+>>(OUTPUT): Collecting colorama
+
+
+>>(OUTPUT):   Using cached colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+
+
+>>(OUTPUT): Collecting requests<3,>=2.4.0
+
+
+>>(OUTPUT):   Using cached requests-2.25.1-py2.py3-none-any.whl (61 kB)
+
+
+>>(OUTPUT): Collecting semantic_version<3,>=2.5.0
+
+
+>>(OUTPUT):   Using cached semantic_version-2.8.5-py2.py3-none-any.whl (15 kB)
+
+
+>>(OUTPUT): Collecting pyjwt<2,>=1.5.3
+
+
+>>(OUTPUT):   Using cached PyJWT-1.7.1-py2.py3-none-any.whl (18 kB)
+
+
+>>(OUTPUT): Collecting click
+
+
+>>(OUTPUT):   Using cached click-8.0.1-py3-none-any.whl (97 kB)
+
+
+>>(OUTPUT): Collecting pyserial<4,>=3
+
+
+>>(OUTPUT):   Using cached pyserial-3.5-py2.py3-none-any.whl (90 kB)
+
+
+>>(OUTPUT): Collecting wheel<1,>=0.35.0
+
+
+>>(OUTPUT):   Using cached wheel-0.36.2-py2.py3-none-any.whl (35 kB)
+
+
+>>(OUTPUT): Processing /home/obijuan/.cache/pip/wheels/54/f6/a0/61c7428efecb0bba3e29396cfd356df0035b7880c522a77312/blackiceprog-2.0.0-py3-none-any.whl
+
+
+>>(OUTPUT): Processing /home/obijuan/.cache/pip/wheels/26/a4/2b/897b9cf1df65467903915f1a3a3e0f5023e8b3b59c07ec57c9/icefunprog-2.0.3-py3-none-any.whl
+
+
+>>(OUTPUT): Processing /home/obijuan/.cache/pip/wheels/cf/d2/b1/30e8e3a2644983350c017a1991181968c687c758486c516c1c/tinyfpgab-1.1.0-py3-none-any.whl
+
+
+>>(OUTPUT): Collecting tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"
+
+
+>>(OUTPUT):   Using cached tinyprog-1.0.21-py3-none-any.whl (10 kB)
+
+
+>>(OUTPUT): Collecting chardet<5,>=3.0.2
+
+
+>>(OUTPUT):   Using cached chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+
+
+>>(OUTPUT): Collecting idna<3,>=2.5
+
+
+>>(OUTPUT):   Using cached idna-2.10-py2.py3-none-any.whl (58 kB)
+
+
+>>(OUTPUT): Collecting urllib3<1.27,>=1.21.1
+
+
+>>(OUTPUT):   Using cached urllib3-1.26.6-py2.py3-none-any.whl (138 kB)
+
+
+>>(OUTPUT): Collecting certifi>=2017.4.17
+
+
+>>(OUTPUT):   Using cached certifi-2021.5.30-py2.py3-none-any.whl (145 kB)
+
+
+>>(OUTPUT): Collecting pyusb
+
+
+>>(OUTPUT):   Downloading pyusb-1.2.0-py3-none-any.whl (58 kB)
+
+
+>>(OUTPUT): Collecting tqdm<5,>=4.19.5
+
+
+>>(OUTPUT):   Downloading tqdm-4.61.2-py2.py3-none-any.whl (76 kB)
+
+
+>>(OUTPUT): Collecting six
+
+
+>>(OUTPUT):   Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+
+
+>>(OUTPUT): Collecting intelhex<3,>=2.2.1
+
+
+>>(OUTPUT):   Using cached intelhex-2.3.0-py2.py3-none-any.whl (50 kB)
+
+
+>>(OUTPUT): Processing /home/obijuan/.cache/pip/wheels/b7/2f/9f/e0ef579cf9c1c669c5f9c18acf76c2b079e9a8ee92c85884e4/jsonmerge-1.8.0-py3-none-any.whl
+
+
+>>(OUTPUT): Collecting packaging
+
+
+>>(OUTPUT):   Downloading packaging-21.0-py3-none-any.whl (40 kB)
+
+
+>>(OUTPUT): Collecting jsonschema
+
+
+>>(OUTPUT):   Using cached jsonschema-3.2.0-py2.py3-none-any.whl (56 kB)
+
+
+>>(OUTPUT): Collecting pyparsing>=2.0.2
+
+
+>>(OUTPUT):   Using cached pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+
+
+>>(OUTPUT): Requirement already satisfied, skipping upgrade: setuptools in /home/obijuan/.icestudio/venv/lib/python3.8/site-packages (from jsonschema->jsonmerge<2,>=1.4.0->tinyprog<1.1.0,>=1.0.21; extra == "tinyprog"->apio[blackiceprog,icefunprog,tinyfpgab,tinyprog]==0.6.7) (44.0.0)
+
+
+>>(OUTPUT): Collecting pyrsistent>=0.14.0
+
+
+>>(OUTPUT):   Downloading pyrsistent-0.18.0-cp38-cp38-manylinux1_x86_64.whl (118 kB)
+
+
+>>(OUTPUT): Collecting attrs>=17.4.0
+
+
+>>(OUTPUT):   Using cached attrs-21.2.0-py2.py3-none-any.whl (53 kB)
+
+
+>>(OUTPUT): Installing collected packages: colorama, chardet, idna, urllib3, certifi, requests, semantic-version, pyjwt, click, pyserial, wheel, blackiceprog, icefunprog, tinyfpgab, pyusb, tqdm, six, intelhex, pyrsistent, attrs, jsonschema, jsonmerge, pyparsing, packaging, tinyprog, apio
+
+
+>>(OUTPUT): Successfully installed apio-0.6.7 attrs-21.2.0 blackiceprog-2.0.0 certifi-2021.5.30 chardet-4.0.0 click-8.0.1 colorama-0.4.4 icefunprog-2.0.3 idna-2.10 intelhex-2.3.0 jsonmerge-1.8.0 jsonschema-3.2.0 packaging-21.0 pyjwt-1.7.1 pyparsing-2.4.7 pyrsistent-0.18.0 pyserial-3.5 pyusb-1.2.0 requests-2.25.1 semantic-version-2.8.5 six-1.16.0 tinyfpgab-1.1.0 tinyprog-1.0.21 tqdm-4.61.2 urllib3-1.26.6 wheel-0.36.2
+
+
+**** STEP: APIO install system
+>>>> utils.executeCommand => export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio" install system
+
+>>(OUTPUT): APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+Installing system package:
+
+
+>>(OUTPUT): Download tools-system-linux_x86_64-1.1.2.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'system' has been successfully installed!
+
+
+**** STEP: APIO install yosys
+>>>> utils.executeCommand => export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio" install yosys
+
+>>(OUTPUT): APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+Installing yosys package:
+
+
+>>(OUTPUT): Download toolchain-yosys-linux_x86_64-2019.12.11.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'yosys' has been successfully installed!
+
+
+**** STEP: APIO install ice40
+>>>> utils.executeCommand => export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio" install ice40
+
+>>(OUTPUT): APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+Installing ice40 package:
+
+
+>>(OUTPUT): Download toolchain-ice40-linux_x86_64-2019.12.11.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'ice40' has been successfully installed!
+
+
+**** STEP: APIO install ecp5
+>>>> utils.executeCommand => export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio" install ecp5
+
+>>(OUTPUT): APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+Installing ecp5 package:
+
+
+>>(OUTPUT): Download toolchain-ecp5-linux_x86_64-2019.12.11.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'ecp5' has been successfully installed!
+
+
+**** STEP: APIO install fujprog
+>>>> utils.executeCommand => export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio" install fujprog
+
+>>(OUTPUT): APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+Installing fujprog package:
+
+
+>>(OUTPUT): Download toolchain-fujprog-linux_x86_64-2020.10.6.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'fujprog' has been successfully installed!
+
+
+**** STEP: APIO install icesprog
+>>>> utils.executeCommand => export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio" install icesprog
+
+>>(OUTPUT): APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+Installing icesprog package:
+
+
+>>(OUTPUT): Download toolchain-icesprog-linux_x86_64-1.0.0.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'icesprog' has been successfully installed!
+
+
+**** STEP: APIO install duf
+>>>> utils.executeCommand => export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio" install dfu
+
+>>(OUTPUT): APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+Installing dfu package:
+
+
+>>(OUTPUT): Download toolchain-dfu-linux_x86_64-2020.11.24.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'dfu' has been successfully installed!
+
+
+**** STEP: APIO install iverilog
+>>>> utils.executeCommand => export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio" install iverilog
+
+>>(OUTPUT): APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+Installing iverilog package:
+
+
+>>(OUTPUT): Download toolchain-iverilog-linux_x86_64-1.1.1.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'iverilog' has been successfully installed!
+
+
+**** STEP: APIO install scons
+>>>> utils.executeCommand => export APIO_HOME_DIR="/home/obijuan/.icestudio/apio"; "/home/obijuan/.icestudio/venv/bin/apio" install scons
+
+>>(OUTPUT): APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+APIO_HOME_DIR: /home/obijuan/.icestudio/apio
+/home/obijuan/.icestudio/apio
+Installing scons package:
+
+
+>>(OUTPUT): Download scons-3.0.1.tar.gz
+
+
+>>(OUTPUT): Downloading
+
+
+>>(OUTPUT): Unpacking
+
+
+>>(OUTPUT): Package 'scons' has been successfully installed!
+
+
+****************** INSTALLATION COMPLETED! **************
+
+
+
